@@ -28,3 +28,14 @@ $( document ).ready(function() {
 
 })
 
+
+// Random User API
+
+$.ajax({
+    url: 'https://randomuser.me/api/?results=500',
+    dataType: 'json',
+    success: function(data) {
+      console.log(data);
+    }
+  });
+
