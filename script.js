@@ -1,5 +1,21 @@
 $( document ).ready(function() {    
-    
+    //function that detects the values of check boxes and outputs them to user queue
+
+    function ifChecked() {
+        $('input[type="checkbox"]').click(function(){
+            if($(this).is(":checked")){
+                console.log($(this).next().text() );
+            }
+            else if($(this).is(":not(:checked)")){
+                console.log("removed " + $(this).next().text() );
+            }
+        });
+        
+        
+    }
+    ifChecked()
+
+
     // dynamically creates submit button
     $( '#submit' ).append('<input type="button" id="submit-button" value="submit" />');
 
@@ -10,18 +26,9 @@ $( document ).ready(function() {
         const email = $( '#email' ).val();
         
         
-        $('input[type="checkbox"]').click(function(){
-            if($(this).prop("checked") == true){
-                alert($(":input").text());
-            }
-            else if($(this).prop("checked") == false){
-                alert("Checkbox is unchecked.");
-            }
-        });
+
+        console.log(firstName, lastName, email)
         
-        console.log(firstName, lastName, email)
-        console.log(firstName, lastName, email)
-    
 
         
     })
