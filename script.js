@@ -35,7 +35,7 @@ $( document ).ready(function() {
 
 })
 
-
+// Chris code here: 
 // Random User API
 
 $.ajax({
@@ -46,3 +46,4 @@ $.ajax({
     }
   });
 
+// Marc code here: 
