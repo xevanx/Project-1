@@ -20,6 +20,7 @@ $( document ).ready(function() {
         });
         
         console.log(firstName, lastName, email)
+        console.log(firstName, lastName, email)
     
 
         
