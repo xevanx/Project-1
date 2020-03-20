@@ -2,11 +2,12 @@ $( document ).ready(function() {
     //function that detects the values of check boxes and outputs them to user queue
 
     function ifChecked() {
-        $('input[type="checkbox"]').click(function(){
-            if($(this).is(":checked")){
+        $( 'input[type="checkbox"]' ).click(function(){
+            if($(this).is( ":checked" )){
                 console.log($(this).next().text() );
+                //Marc here
             }
-            else if($(this).is(":not(:checked)")){
+            else {
                 console.log("removed " + $(this).next().text() );
             }
         });
