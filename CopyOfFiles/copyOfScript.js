@@ -179,9 +179,9 @@ $.ajax({
 
 // Evan code here:
 var addUser = document.querySelector("#welcome-button");
-var userObject=[],
+var userObject=[]
 
-$(addUser).click(function) {
+$(addUser).click(function() {
      userObject.push({
          firstName: document.querySelector("first_name").value,
          lastName: document.querySelector("last_name").value,
@@ -189,4 +189,4 @@ $(addUser).click(function) {
      });
      localStorage.setItem(userObject);
 
-};
+});

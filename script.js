@@ -96,29 +96,30 @@ $( document ).ready(function() {
 
 // Chris code here: 
 
-// <----variable values for wait times ----->
-// var accesories = 5;
-// var portIn = 3;
-// var upgrade = 25;
-// var JustLook = 15;
-// var BusinessAcc = 45;
-
 // <-----array vals and function storage------>
 
-var welomeInput = [];
-var userInfo = {};
-// I don't know what I should target here
-$("").each(function (index, value){
+// var welomeInput = [];
+// var userInfo = {};
+// // I don't know what I should target here
+// $("").each(function (index, value){
 
-    // creates an object out of user information, have user input be global variables
-    userInfo = {
-        name: firstname + lastname, email: email
-    }
-    // pushes object variable into the array, have this last since we need to store
-    // the users help request into the object as well
-    welomeInput.push(userInfo);
-    // pushes the whole thing into locall storage
-    localStorage.setItem("welcomeInput", JSON.stringify(welomeInput));
+// //     // creates an object out of user information, have user input be global variables
+//     userInfo = {"Name": firstname,"Email": email, "Reason": reason}
+// //     // pushes object variable into the array, have this last since we need to store
+// //     // the users help request into the object as well
+//     welomeInput.push(userInfo);
+// //     // pushes the whole thing into locall storage
+//     localStorage.setItem("welcomeInput", JSON.stringify(welomeInput));
+//     console.log(localStorage.getItem("welcomeInput"))
+
+// })
+
+$(".modal-trigger").on("click", function(){
+    console.log($(this))
+    $("#modal1").modal("show")
+    $("#modal-text").text("This works")
+    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm:ss a'))
+
 
 })
 
@@ -127,22 +128,16 @@ $("").each(function (index, value){
 // error caught, doesn't reference moment.js for some reason
 // does however format the code into readable entries so we can have a time stamp for the user
 
-// const moment  = require('moment');
-// const from    = moment(iso)
-
-// <----format is what we need to push into the object also, I took it out since its not working right now
-// const format  = 'YYYY-MM-DD [at] HH:mm'
-
-// const fromStr = from.format(format)
-// const toStr   = to.format(format)
-// const str     = `From ${fromStr} to ${toStr}`
-// console.log(str)
+// console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+ 
 
 // <-----function reset all parameters------>
 function reset(){
 
     $(".check-item").prop("checked", false);
-
+    firstName = "";
+    lastName = "";
+    email = "";
     // targets all forms and resets data, error: targets only one data entry....sometimes
     $("form").reset(); 
   
@@ -152,14 +147,11 @@ function reset(){
 $("button").on("click", function () {
     
     // container.removeAttr("display: none");
-        
-        if ($(this).attr() === ".btn"){
             reset();
-        }
 
 });
 
-
+// <----- end chris code area-------->
 
 
 
@@ -172,19 +164,20 @@ $.ajax({
     success: function(data) {
       console.log(data);
     }
-  });
+});
 
 // Marc code here: 
 
 
 // Evan code here:
-var addUser = document.querySelector("#welcome-button");
-var userObject=[];
 
-$(addUser).click(function){
-    firstname=document.querySelector("first_name").value;
-    lastname=document.querySelector("last_name").value;
-    email=document.querySelector("email").value;
+var addUser = document.querySelector("#welcome-button");
+var userObject=[]
+
+$("#welcome-button").on("click", function() {
+    firstname = document.querySelector("first_name").value;
+    lastname = document.querySelector("last_name").value;
+    email = document.querySelector("email").value;
     userObject.push({
          FirstName: firstname,
          LastName: lastname,
@@ -192,4 +185,5 @@ $(addUser).click(function){
      });
      localStorage.setItem(userObject);
      console.log(userObject);
-};
+});
+
