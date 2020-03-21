@@ -116,9 +116,9 @@ $( document ).ready(function() {
 
 $(".modal-trigger").on("click", function(){
     console.log($(this))
-    $("#modal1").modal("show")
+    $(".modal").modal()
     $("#modal-text").text("This works")
-    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm:ss a'))
+    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm a'))
 
 
 })
