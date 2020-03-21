@@ -105,28 +105,34 @@
     </p>
   </form>
 
-  <button class="btn waves-effect waves-light  purple darken-2 modal-trigger" type="submit" href="#modal1" name="action">Submit
+  <button class="btn waves-effect waves-light purple lighten-1" type="submit" name="action" onclick="window.location.href='welcome.html'">Cancel
     <i class="material-icons right"></i>
   </button>
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
+     <!-- Chris work area changes made on 3/21/2020 please delete these comments after pull -->
+     <a class="waves-effect waves-light btn modal-trigger purple darken-2" href="#modal1">Submit</a>
+
+    
+     <div id="modal1" class="modal" style="z-index: 1003;display:none;opacity: 0; top: 4%; transform: scaleX(0.8) scaleY(0.8);">
+       <div class="modal-content">
+         <h4></h4>
+         <p id="modal-text"></p>
+       </div>
+       <div class="modal-footer">
+         <a href="welcome.html" class="modal-close waves-effect waves-green btn-flat">Ok</a>
+       </div>
+     </div>
+     <!-- End work area -->
+
+
 
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
   <script src="script.js"></script>
-  <script src="timer.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
