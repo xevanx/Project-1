@@ -21,30 +21,23 @@
     <!-- Page Content goes here -->
   
   <div>
-    <h4 id="visitorName">Enter your name and save your place in line </h4>
+    <h4 id="visitorName">Enter your name and email to save your place in line </h4>
     <div class="row">
       <form class="col s12">
         <div class="row">
-          <div class="input-field col s6">
+          <div class="input-field col s4">
             <input id="first_name" type="text" class="validate">
             <label for="first_name">First Name</label>
           </div>
-        </form>
-      </div>
-
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate">
-              <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate">
-              <label for="last_name">Last Name</label>
-            </div>
+          <div class="input-field col s4">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Last Name</label>
           </div>
-      </div>
+          <div class="input-field col s4">
+            <input placeholder="Email" id="email" type="email" class="validate">
+            <label for="email"></label>
+          </div>
+        </div>
     </div>
 
 
@@ -80,20 +73,15 @@
           </div>
         
           <label>Browser Select</label>-->
-    <select class="browser-default">
-      <option value="" disabled selected>Choose your Mobile Representative</option>
-      <option value="1">Evan</option>
-      <option value="2">Chris</option>
-      <option value="3">Marc</option>
-      <option value="4">William</option>
-    </select>
-    <br>
-    <a class="waves-effect waves-light btn purple darken-2" href="index.html">Submit</a>
-
-    <button class="btn waves-effect waves-light purple lighten-1" type="submit" name="action">Cancel
-      <i class="material-icons right"></i>
-    </button>
-  </div>
+  <select class="browser-default">
+    <option value="" disabled selected>Choose your Mobile Representative</option>
+    <option value="1">Evan</option>
+    <option value="2">Chris</option>
+    <option value="3">Marc</option>
+    <option value="4">William</option>
+  </select>
+  <a class="waves-effect waves-light btn" id="welcome-button" onclick="window.location.href='index.html'">button</a>
+  <script src="script.js"></script>
 </body>
 
 </html>
