@@ -174,7 +174,7 @@ $.ajax({
 var addUser = document.querySelector("#welcome-button");
 var userObject=[]
 
-$("#welcome-button").on("click", function() {
+$(addUser).on("click", function() {
     firstname = document.querySelector("first_name").value;
     lastname = document.querySelector("last_name").value;
     email = document.querySelector("email").value;
