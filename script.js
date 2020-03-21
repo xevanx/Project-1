@@ -172,19 +172,18 @@ $.ajax({
     success: function(data) {
       console.log(data);
     }
-  });
+});
 
 // Marc code here: 
 
 
 // Evan code here:
-var addUser = document.querySelector("#welcome-button");
-var userObject=[],
+var userObject=[]
 
-$(addUser).click(function) {
-    firstname=document.querySelector("first_name").value;
-    lastname=document.querySelector("last_name").value;
-    email=document.querySelector("email").value;
+$("#welcome-button").on("click", function() {
+    firstname = document.querySelector("first_name").value;
+    lastname = document.querySelector("last_name").value;
+    email = document.querySelector("email").value;
     userObject.push({
          FirstName: firstname,
          LastName: lastname,
@@ -192,4 +191,4 @@ $(addUser).click(function) {
      });
      localStorage.setItem(userObject);
      console.log(userObject);
-};
+});
