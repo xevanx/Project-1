@@ -123,11 +123,14 @@ $.ajax({
 var addUser=document.querySelector("#welcome-button");
 var userObject=[],
 
-$('addUser').click(function) {
-     userObject.push({
-         firstName: document.querySelector("first_name").value,
-         lastName: document.querySelector("last_name").value,
-         email: document.querySelector("email").value
+$(addUser).click(function) {
+    firstname=document.querySelector("first_name").value;
+    lastname=document.querySelector("last_name").value;
+    email=document.querySelector("email").value;
+    userObject.push({
+         FirstName: firstname,
+         LastName: lastname,
+         Email: email
      });
      localStorage.setItem(userObject);
-});
+};
