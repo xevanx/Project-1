@@ -116,11 +116,9 @@ $( document ).ready(function() {
 
 $(".modal-trigger").on("click", function(){
     console.log($(this))
-    $("#modal1").modal("show")
+    $(".modal").modal()
     $("#modal-text").text("This works")
     $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm:ss a'))
-
-
 })
 
 // <------ Moment Js reference and formatting code here------>
@@ -147,7 +145,7 @@ function reset(){
 $("button").on("click", function () {
     
     // container.removeAttr("display: none");
-            reset();
+    reset();
 
 });
 
@@ -172,7 +170,7 @@ $.ajax({
 // Evan code here:
 
 var addUser = document.querySelector("#welcome-button");
-var userObject=[]
+var userObject=[];
 
 $("#welcome-button").on("click", function() {
     firstname = document.querySelector("first_name").value;
