@@ -6,29 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body class="background-body">
 
+  <nav>
+    <div class="nav-wrapper purple darken-2">
+      <a href="#" class="brand-logo">Hol Up</a>
+    </div>
+  </nav>
   <div class="container">
-    <nav>
-      <div class="nav-wrapper purple darken-2">
-        <a href="#" class="brand-logo">Hol Up</a>
-      </div>
-    </nav>
-
-    <div>
-      <h4 id="visitorName">Welcome!</h4>
-
-      <div class="row">
-        <form class="col s8">
-          <div class="row">
-            <p>Please enter your email</p>
-            <div class="input-field col s4">
-              <input placeholder="Email" id="email" type="email" class="validate">
-              <label for="email"></label>
-            </div>
+    <!-- Page Content goes here -->
+  
+  <div>
+    <h4 id="visitorName">Enter your name and save your place in line </h4>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="first_name" type="text" class="validate">
+            <label for="first_name">First Name</label>
           </div>
         </form>
       </div>
