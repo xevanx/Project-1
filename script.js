@@ -118,9 +118,13 @@ $(".modal-trigger").on("click", function(){
     console.log($(this))
     $(".modal").modal()
     $("#modal-text").text("This works")
+<<<<<<< HEAD
     $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm a'))
 
 
+=======
+    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm:ss a'))
+>>>>>>> 9a354d58a44083688d740439b35a2c81531b37c1
 })
 
 // <------ Moment Js reference and formatting code here------>
@@ -147,7 +151,7 @@ function reset(){
 $("button").on("click", function () {
     
     // container.removeAttr("display: none");
-            reset();
+    reset();
 
 });
 
@@ -172,9 +176,9 @@ $.ajax({
 // Evan code here:
 
 var addUser = document.querySelector("#welcome-button");
-var userObject=[]
+var userObject=[];
 
-$("#welcome-button").on("click", function() {
+$(addUser).on("click", function() {
     firstname = document.querySelector("first_name").value;
     lastname = document.querySelector("last_name").value;
     email = document.querySelector("email").value;
