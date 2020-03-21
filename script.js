@@ -10,7 +10,7 @@ $( document ).ready(function() {
             else {
                 console.log("removed " + $(this).next().text() );
             }
-        });
+        };
         
         
     }
