@@ -1,5 +1,63 @@
 $( document ).ready(function() {    
     //function that detects the values of check boxes and outputs them to user queue
+    const checkItems = [
+        {
+            checkItem: "Accessories",
+            duration: this.setMinutes(5)
+        },
+        {
+            checkItem: "Activate Prepaid",
+            duration: this.setMinutes(5)
+        },
+        {   
+            checkItem: "Activate Service",
+            duration: this.setMinutes(5)
+        },
+        {   
+            checkItem: "Promotional",
+            duration: this.setMinutes(5)
+        },
+        {
+            checkItem: "SIM Card",
+            duration: this.setMinutes(5)
+        },
+        {
+            checkItem: "Upgrade",
+            duration: this.setMinutes(5)
+        },
+        {
+            checkItem: "Add/Remove Features",
+            duration: this.setMinutes(5)
+        },
+        {
+            checkItem: "Bill Pay",
+            duration: this.setMinutes(5)
+        },
+        {
+            checkItem: "Bill Troubleshooting",
+            duration: this.setMinutes(5)
+        },
+        {
+            checkItem: "Just Browsing",
+            duration: this.setMinutes(5)
+        },
+        {
+            checkItem: "Return/Exchange",
+            duration: this.setMinutes(5)
+        },
+        {
+            checkItem: "Service Account",
+            duration: this.setMinutes(5)
+        },
+        {
+            checkItem: "Service Device",
+            duration: this.setMinutes(5)
+        },
+        {
+            checkItem: "Warrenty Exchange",
+            duration: this.setMinutes(5)
+        },
+    ]
 
     function ifChecked() {
         $( 'input[type="checkbox"]' ).click(function(){
@@ -112,6 +170,7 @@ $.ajax({
 
 
 // Evan code here:
+<<<<<<< HEAD
 // var addUser=document.querySelector("#welcome-button");
 // var userObject=[],
 
@@ -123,3 +182,20 @@ $.ajax({
 // //      });
 // //      localStorage.setItem(userObject);
 // // });
+=======
+var addUser = document.querySelector("#welcome-button");
+var userObject=[],
+
+$(addUser).click(function) {
+    firstname=document.querySelector("first_name").value;
+    lastname=document.querySelector("last_name").value;
+    email=document.querySelector("email").value;
+    userObject.push({
+         FirstName: firstname,
+         LastName: lastname,
+         Email: email
+     });
+     localStorage.setItem(userObject);
+     console.log(userObject);
+};
+>>>>>>> ddc8ac3d3df1518503c9c0be93a7b3c2f3e609d6
