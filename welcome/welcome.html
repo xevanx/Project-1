@@ -11,51 +11,66 @@
 
 <body class="background-body">
 
-  <nav>
-    <div class="nav-wrapper purple darken-2">
-      <a href="#" class="brand-logo">Hol Up</a>
-    </div>
-  </nav>
+  <div class="container">
+    <nav>
+      <div class="nav-wrapper purple darken-2">
+        <a href="#" class="brand-logo">Hol Up</a>
+      </div>
+    </nav>
 
-  <div>
-    <h4 id="visitorName">Enter your name and save your place in line </h4>
-    <div class="row">
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="first_name" type="text" class="validate">
-            <label for="first_name">First Name</label>
+    <div>
+      <h4 id="visitorName">Welcome!</h4>
+
+      <div class="row">
+        <form class="col s8">
+          <div class="row">
+            <p>Please enter your email</p>
+            <div class="input-field col s4">
+              <input placeholder="Email" id="email" type="email" class="validate">
+              <label for="email"></label>
+            </div>
           </div>
-          <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Last Name</label>
+        </form>
+      </div>
+
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
           </div>
-        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="returning">
-    <h4>Is this a return visit?</h4>
-    <form action="#">
-      <p>
-        <label>
-          <input type="checkbox" />
-          <span>Yes</span>
-        </label>
-      </p>
 
-      <p>
-        <label>
-          <input type="checkbox" />
-          <span>No</span>
-        </label>
-      </p>
+    <div class="returning">
+      <h4>Is this a return visit?</h4>
+      <form action="#">
+        <p>
+          <label>
+            <input type="checkbox" />
+            <span>Yes</span>
+          </label>
+        </p>
 
-  </div class="choose">
+        <p>
+          <label>
+            <input type="checkbox" />
+            <span>No</span>
+          </label>
+        </p>
 
-  <h4> Who did you work with? </h4>
+    </div class="choose">
 
-  <!--<div class="input-field col s12 m6">
+    <h4> Who did you work with? </h4>
+
+    <!--<div class="input-field col s12 m6">
             <select class="icons">
               <option value="" disabled selected>Choose your option</option>
               <option value="" data-icon="images/sample-1.jpg" class="left">example 1</option>
@@ -66,89 +81,20 @@
           </div>
         
           <label>Browser Select</label>-->
-  <select class="browser-default">
-    <option value="" disabled selected>Choose your Mobile Representative</option>
-    <option value="1">Evan</option>
-    <option value="2">Chris</option>
-    <option value="3">Marc</option>
-    <option value="4">William</option>
-  </select>
-<<<<<<< HEAD:welcome/index.html
-  </form>
+    <select class="browser-default">
+      <option value="" disabled selected>Choose your Mobile Representative</option>
+      <option value="1">Evan</option>
+      <option value="2">Chris</option>
+      <option value="3">Marc</option>
+      <option value="4">William</option>
+    </select>
+    <br>
+    <a class="waves-effect waves-light btn purple darken-2" href="index.html">Submit</a>
 
-  <div class="row">
-    <form class="col s4">
-      <div class="row">
-        <div class="input-field col s4">
-          <input placeholder="First Name" id="first_name" type="text" class="validate">
-          <label for="first_name"></label>
-        </div>
-        <div class="input-field col s4">
-          <input placeholder="Last Name" id="last_name" type="text" class="validate">
-          <label for="last_name"></label>
-        </div>
-      </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s4">
-          <input placeholder="Email" id="email" type="email" class="validate">
-          <label for="email"></label>
-        </div>
-      </div>
-    </form>
+    <button class="btn waves-effect waves-light purple lighten-1" type="submit" name="action">Cancel
+      <i class="material-icons right"></i>
+    </button>
   </div>
-
-  <form action="#">
-    <p>
-      <label>
-        <input name="group1" type="radio" checked />
-        <span>Accesories</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group1" type="radio" />
-        <span>Yellow</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input class="with-gap" name="group1" type="radio"  />
-        <span>Green</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group1" type="radio" disabled="disabled" />
-        <span>Brown</span>
-      </label>
-    </p>
-  </form>
-
-  <button class="btn waves-effect waves-light btn modal-trigger purple darken-2" type="submit" name="action">Submit
-    <i class="material-icons right"></i>
-  </button>
-
-
-  <!-- Modal Trigger
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Your Ticket has been accepted!</h4>
-      
-      <p></p>
-    </div>
-    <div class="modal-footer">
-      <a class="modal-close waves-effect waves-green btn-flat">Ok</a>
-    </div>
-  </div>
-  <script src="timer.js"></script>   
-  <script src="main.js"></script>
-  
-=======
-  <a class="waves-effect waves-light btn">button</a>
->>>>>>> 3802f77b1a6e38ae5ec134bb3e7c529f9e9fe89f:welcome/welcome.html
 </body>
+
 </html>
