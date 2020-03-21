@@ -18,17 +18,21 @@
   </nav>
 
   <div>
-    <h4 id="visitorName">Enter your name and save your place in line </h4>
+    <h4 id="visitorName">Enter your name and email to save your place in line </h4>
     <div class="row">
       <form class="col s12">
         <div class="row">
-          <div class="input-field col s6">
+          <div class="input-field col s4">
             <input id="first_name" type="text" class="validate">
             <label for="first_name">First Name</label>
           </div>
-          <div class="input-field col s6">
+          <div class="input-field col s4">
             <input id="last_name" type="text" class="validate">
             <label for="last_name">Last Name</label>
+          </div>
+          <div class="input-field col s4">
+            <input placeholder="Email" id="email" type="email" class="validate">
+            <label for="email"></label>
           </div>
         </div>
     </div>
@@ -53,7 +57,7 @@
 
   </div class="choose">
 
-  <h4> Who did you work with? </h4>
+  <h4>Who do you want to work with?</h4>
 
   <!--<div class="input-field col s12 m6">
             <select class="icons">
@@ -73,6 +77,7 @@
     <option value="3">Marc</option>
     <option value="4">William</option>
   </select>
-  <a class="waves-effect waves-light btn">button</a>
+  <a class="waves-effect waves-light btn" id="welcome-button" onclick="window.location.href='index.html'">button</a>
+  <script src="script.js"></script>
 </body>
 </html>

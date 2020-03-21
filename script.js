@@ -48,3 +48,17 @@ $.ajax({
   });
 
 // Marc code here: 
+
+
+// Evan code here:
+var addUser=document.querySelector("#welcome-button");
+var userObject=[],
+
+$('addUser').click(function) {
+     userObject.push({
+         firstName: document.querySelector("first_name").value,
+         lastName: document.querySelector("last_name").value,
+         email: document.querySelector("email").value
+     });
+     localStorage.setItem(userObject);
+});
