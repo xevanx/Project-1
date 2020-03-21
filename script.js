@@ -10,7 +10,7 @@ $( document ).ready(function() {
             else {
                 console.log("removed " + $(this).next().text() );
             }
-        };
+        });
         
         
     }
@@ -133,4 +133,5 @@ $(addUser).click(function) {
          Email: email
      });
      localStorage.setItem(userObject);
+     console.log(userObject);
 };
