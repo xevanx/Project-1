@@ -53,9 +53,7 @@ var userInfo = {};
 $("").each(function (index, value){
 
     // creates an object out of user information, have user input be global variables
-    userInfo = {
-        name: firstname + lastname, email: email
-    }
+    userInfo = {"Name": firstname,"Email": email, "Reason": reason}
     // pushes object variable into the array, have this last since we need to store
     // the users help request into the object as well
     welomeInput.push(userInfo);
