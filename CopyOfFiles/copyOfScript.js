@@ -2,12 +2,11 @@ $( document ).ready(function() {
     //function that detects the values of check boxes and outputs them to user queue
 
     function ifChecked() {
-        $( 'input[type="checkbox"]' ).click(function(){
-            if($(this).is( ":checked" )){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).is(":checked")){
                 console.log($(this).next().text() );
-                //Marc here
             }
-            else {
+            else if($(this).is(":not(:checked)")){
                 console.log("removed " + $(this).next().text() );
             }
         });
@@ -36,15 +35,3 @@ $( document ).ready(function() {
 
 })
 
-// Chris code here: 
-// Random User API
-
-$.ajax({
-    url: 'https://randomuser.me/api/?results=500',
-    dataType: 'json',
-    success: function(data) {
-      console.log(data);
-    }
-  });
-
-// Marc code here: 
