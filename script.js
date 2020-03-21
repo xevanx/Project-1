@@ -120,7 +120,7 @@ $.ajax({
 
 
 // Evan code here:
-var addUser=document.querySelector("#welcome-button");
+var addUser = document.querySelector("#welcome-button");
 var userObject=[],
 
 $(addUser).click(function) {
