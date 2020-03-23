@@ -16,6 +16,7 @@
     <div class="nav-wrapper purple darken-2">
       <a href="#" class="brand-logo">Hol Up</a>
     </div>
+    <div class="clock"></div>
   </nav>
   <div class="background-body card-panel blue-grey lighten-5">
   <div class="container">
@@ -47,14 +48,14 @@
       <form action="#">
         <p>
           <label>
-            <input type="checkbox" />
+            <input type="radio" name="return-visit"/>
             <span>Yes</span>
           </label>
         </p>
 
         <p>
           <label>
-            <input type="checkbox" />
+            <input type="radio" name="return-visit"/>
             <span>No</span>
           </label>
         </p>
@@ -85,11 +86,14 @@
   
   <a class="waves-effect waves-light btn" id="welcome-button">Submit</a>
 
-<button class="btn waves-effect waves-light purple lighten-1" type="submit" name="action">Cancel
+<button class="btn waves-effect waves-light purple lighten-1" type="submit" name="action" >Cancel
     <i class="material-icons right"></i>
   </button>
-  
-  <script src="script.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
