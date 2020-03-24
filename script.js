@@ -3,19 +3,19 @@ $( document ).ready(function() {
     // const checkItems = [
     //     {
     //         checkItem: "Accessories",
-    //         duration: this.setMinutes(5)
+    //         duration: this.setMinutes(10)
     //     },
     //     {
     //         checkItem: "Activate Prepaid",
-    //         duration: this.setMinutes(5)
+    //         duration: this.setMinutes(15)
     //     },
     //     {   
     //         checkItem: "Activate Service",
-    //         duration: this.setMinutes(5)
+    //         duration: this.setMinutes(25)
     //     },
     //     {   
     //         checkItem: "Promotional",
-    //         duration: this.setMinutes(5)
+    //         duration: this.setMinutes(15)
     //     },
     //     {
     //         checkItem: "SIM Card",
@@ -23,7 +23,7 @@ $( document ).ready(function() {
     //     },
     //     {
     //         checkItem: "Upgrade",
-    //         duration: this.setMinutes(5)
+    //         duration: this.setMinutes(30)
     //     },
     //     {
     //         checkItem: "Add/Remove Features",
@@ -31,11 +31,11 @@ $( document ).ready(function() {
     //     },
     //     {
     //         checkItem: "Bill Pay",
-    //         duration: this.setMinutes(5)
+    //         duration: this.setMinutes(3)
     //     },
     //     {
     //         checkItem: "Bill Troubleshooting",
-    //         duration: this.setMinutes(5)
+    //         duration: this.setMinutes(15)
     //     },
     //     {
     //         checkItem: "Just Browsing",
@@ -43,19 +43,19 @@ $( document ).ready(function() {
     //     },
     //     {
     //         checkItem: "Return/Exchange",
-    //         duration: this.setMinutes(5)
+    //         duration: this.setMinutes(20)
     //     },
     //     {
     //         checkItem: "Service Account",
-    //         duration: this.setMinutes(5)
+    //         duration: this.setMinutes(10)
     //     },
     //     {
     //         checkItem: "Service Device",
-    //         duration: this.setMinutes(5)
+    //         duration: this.setMinutes(25)
     //     },
     //     {
     //         checkItem: "Warrenty Exchange",
-    //         duration: this.setMinutes(5)
+    //         duration: this.setMinutes(15)
     //     },
     // ]
 
