@@ -79,15 +79,6 @@ $( document ).ready(function() {
 
 
 $(".modal-trigger").on("click", function(){
-<<<<<<< HEAD
-    console.log($(this));
-    console.log(userObject.firstName + "targeting works!");
-    $(".modal").modal();  
-    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm a'));
-    $("#modal-text").text("Name: " + firstname + " " + lastName, "Reason for visit: " + $(".check-item").val());
- 
-
-=======
     console.log($(this))
     var displayName = localStorage.getItem("savedName");
     userNumb()
@@ -95,7 +86,6 @@ $(".modal-trigger").on("click", function(){
     $("#modal-text").text("There are " + totalUser + " people ahead of you in the queue.")
     $("h5").text(displayName + ", your estimated wait time is " + convertHour + ":" + convertMin + ".")
     $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm A'))
->>>>>>> 83c0636bb81b3bbe5f6f68dd61a66252538573aa
 });
 
 // <-----function reset all parameters------>
