@@ -115,25 +115,16 @@ $( document ).ready(function() {
 // })
 
 $(".modal-trigger").on("click", function(){
-    console.log($(this))
-    $(".modal").modal()
-    $("#modal-text").text("This works")
-<<<<<<< HEAD
-    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm a'))
-
-
-=======
-    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm:ss a'))
->>>>>>> 9a354d58a44083688d740439b35a2c81531b37c1
-})
-
-// <------ Moment Js reference and formatting code here------>
-
-// error caught, doesn't reference moment.js for some reason
-// does however format the code into readable entries so we can have a time stamp for the user
-
-// console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+    console.log($(this));
+    $(".modal").modal();  
+    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm a'));
+    localStorage.getItem(userObject.firstName);
+    localStorage.getItem(userObject.lastName);
+    localStorage.getItem(userObject.email);
+    $("#modal-text").text("Name: " + firstname + " " + lastName, "Email: " + email, "Reason for visit: " + $(".check-item").val());
  
+
+});
 
 // <-----function reset all parameters------>
 function reset(){
