@@ -1,63 +1,63 @@
 $( document ).ready(function() {    
-    //function that detects the values of check boxes and outputs them to user queue
-    // const checkItems = [
-    //     {
-    //         checkItem: "Accessories",
-    //         duration: this.setMinutes(10)
-    //     },
-    //     {
-    //         checkItem: "Activate Prepaid",
-    //         duration: this.setMinutes(15)
-    //     },
-    //     {   
-    //         checkItem: "Activate Service",
-    //         duration: this.setMinutes(25)
-    //     },
-    //     {   
-    //         checkItem: "Promotional",
-    //         duration: this.setMinutes(15)
-    //     },
-    //     {
-    //         checkItem: "SIM Card",
-    //         duration: this.setMinutes(5)
-    //     },
-    //     {
-    //         checkItem: "Upgrade",
-    //         duration: this.setMinutes(30)
-    //     },
-    //     {
-    //         checkItem: "Add/Remove Features",
-    //         duration: this.setMinutes(5)
-    //     },
-    //     {
-    //         checkItem: "Bill Pay",
-    //         duration: this.setMinutes(3)
-    //     },
-    //     {
-    //         checkItem: "Bill Troubleshooting",
-    //         duration: this.setMinutes(15)
-    //     },
-    //     {
-    //         checkItem: "Just Browsing",
-    //         duration: this.setMinutes(5)
-    //     },
-    //     {
-    //         checkItem: "Return/Exchange",
-    //         duration: this.setMinutes(20)
-    //     },
-    //     {
-    //         checkItem: "Service Account",
-    //         duration: this.setMinutes(10)
-    //     },
-    //     {
-    //         checkItem: "Service Device",
-    //         duration: this.setMinutes(25)
-    //     },
-    //     {
-    //         checkItem: "Warrenty Exchange",
-    //         duration: this.setMinutes(15)
-    //     },
-    // ]
+    // function that detects the values of check boxes and outputs them to user queue
+    const checkItems = [
+        {
+            checkItem: "Accessories",
+            duration: moment().add(10, 'm')
+        },
+        {
+            checkItem: "Activate Prepaid",
+            duration: moment().add(15, 'm')
+        },
+        {   
+            checkItem: "Activate Service",
+            duration: moment().add(25, 'm')
+        },
+        {   
+            checkItem: "Promotional",
+            duration: moment().add(15, 'm')
+        },
+        {
+            checkItem: "SIM Card",
+            duration: moment().add(5, 'm')
+        },
+        {
+            checkItem: "Upgrade",
+            duration: moment().add(30, 'm')
+        },
+        {
+            checkItem: "Add/Remove Features",
+            duration: moment().add(5, 'm')
+        },
+        {
+            checkItem: "Bill Pay",
+            duration: moment().add(3, 'm')
+        },
+        {
+            checkItem: "Bill Troubleshooting",
+            duration: moment().add(15, 'm')
+        },
+        {
+            checkItem: "Just Browsing",
+            duration: moment().add(5, 'm')
+        },
+        {
+            checkItem: "Return/Exchange",
+            duration: moment().add(20, 'm')
+        },
+        {
+            checkItem: "Service Account",
+            duration: moment().add(10, 'm')
+        },
+        {
+            checkItem: "Service Device",
+            duration: moment().add(25, 'm')
+        },
+        {
+            checkItem: "Warrenty Exchange",
+            duration: moment().add(15, 'm')
+        },
+    ]
 
     function ifChecked() {
         $( 'input[type="checkbox"]' ).click(function(){
@@ -77,54 +77,27 @@ $( document ).ready(function() {
 
 })
 
-// Chris code here: 
-
-// <-----array vals and function storage------>
-
-// var welomeInput = [];
-// var userInfo = {};
-// // I don't know what I should target here
-// $("").each(function (index, value){
-
-// //     // creates an object out of user information, have user input be global variables
-//     userInfo = {"Name": firstname,"Email": email, "Reason": reason}
-// //     // pushes object variable into the array, have this last since we need to store
-// //     // the users help request into the object as well
-//     welomeInput.push(userInfo);
-// //     // pushes the whole thing into locall storage
-//     localStorage.setItem("welcomeInput", JSON.stringify(welomeInput));
-//     console.log(localStorage.getItem("welcomeInput"))
-
-// })
 
 $(".modal-trigger").on("click", function(){
     console.log($(this));
+    console.log(userObject.firstName + "targeting works!")
     $(".modal").modal();  
     $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm a'));
-    localStorage.getItem(userObject.firstName);
-    localStorage.getItem(userObject.lastName);
-    localStorage.getItem(userObject.email);
-    $("#modal-text").text("Name: " + firstName + " " + lastName, "Email: " + email, "Reason for visit: " + $(".check-item").val());
+    $("#modal-text").text("Name: " + firstname + " " + lastName, "Reason for visit: " + $(".check-item").val());
  
 
 });
 
 // <-----function reset all parameters------>
-function reset(){
 
-    $(".check-item").prop("checked", false);
-    firstName = "";
-    lastName = "";
-    email = "";
-    // targets all forms and resets data, error: targets only one data entry....sometimes
-    $("form").reset(); 
-  
-}
 
 // <----reset button------>
 $("button").on("click", function () {
     
     // container.removeAttr("display: none");
+
+
+
     reset();
 
 });
