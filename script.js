@@ -1,63 +1,63 @@
 $( document ).ready(function() {    
     //function that detects the values of check boxes and outputs them to user queue
-    const checkItems = [
-        {
-            checkItem: "Accessories",
-            duration: this.setMinutes(5)
-        },
-        {
-            checkItem: "Activate Prepaid",
-            duration: this.setMinutes(5)
-        },
-        {   
-            checkItem: "Activate Service",
-            duration: this.setMinutes(5)
-        },
-        {   
-            checkItem: "Promotional",
-            duration: this.setMinutes(5)
-        },
-        {
-            checkItem: "SIM Card",
-            duration: this.setMinutes(5)
-        },
-        {
-            checkItem: "Upgrade",
-            duration: this.setMinutes(5)
-        },
-        {
-            checkItem: "Add/Remove Features",
-            duration: this.setMinutes(5)
-        },
-        {
-            checkItem: "Bill Pay",
-            duration: this.setMinutes(5)
-        },
-        {
-            checkItem: "Bill Troubleshooting",
-            duration: this.setMinutes(5)
-        },
-        {
-            checkItem: "Just Browsing",
-            duration: this.setMinutes(5)
-        },
-        {
-            checkItem: "Return/Exchange",
-            duration: this.setMinutes(5)
-        },
-        {
-            checkItem: "Service Account",
-            duration: this.setMinutes(5)
-        },
-        {
-            checkItem: "Service Device",
-            duration: this.setMinutes(5)
-        },
-        {
-            checkItem: "Warrenty Exchange",
-            duration: this.setMinutes(5)
-        },
-    ]
+    // const checkItems = [
+    //     {
+    //         checkItem: "Accessories",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {
+    //         checkItem: "Activate Prepaid",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {   
+    //         checkItem: "Activate Service",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {   
+    //         checkItem: "Promotional",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {
+    //         checkItem: "SIM Card",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {
+    //         checkItem: "Upgrade",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {
+    //         checkItem: "Add/Remove Features",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {
+    //         checkItem: "Bill Pay",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {
+    //         checkItem: "Bill Troubleshooting",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {
+    //         checkItem: "Just Browsing",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {
+    //         checkItem: "Return/Exchange",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {
+    //         checkItem: "Service Account",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {
+    //         checkItem: "Service Device",
+    //         duration: this.setMinutes(5)
+    //     },
+    //     {
+    //         checkItem: "Warrenty Exchange",
+    //         duration: this.setMinutes(5)
+    //     },
+    // ]
 
     function ifChecked() {
         $( 'input[type="checkbox"]' ).click(function(){
@@ -74,23 +74,6 @@ $( document ).ready(function() {
     }
     ifChecked()
 
-
-    // dynamically creates submit button
-    $( '#submit' ).append('<input type="button" id="submit-button" value="submit" />');
-
-    $( '#submit-button' ).on("click", function() {
-    // after clicking the submit button, the function should take in the user's first and last name along with whatever selections they have made.
-        const firstName = $( '#first_name' ).val();
-        const lastName = $( '#last_name' ).val();
-        const email = $( '#email' ).val();
-        
-        
-
-        console.log(firstName, lastName, email)
-        
-
-        
-    })
 
 })
 
@@ -115,6 +98,7 @@ $( document ).ready(function() {
 // })
 
 $(".modal-trigger").on("click", function(){
+<<<<<<< HEAD
     console.log($(this));
     $(".modal").modal();  
     $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm a'));
@@ -122,6 +106,20 @@ $(".modal-trigger").on("click", function(){
     localStorage.getItem(userObject.lastName);
     localStorage.getItem(userObject.email);
     $("#modal-text").text("Name: " + firstname + " " + lastName, "Email: " + email, "Reason for visit: " + $(".check-item").val());
+=======
+    console.log($(this))
+    $(".modal").modal()
+    $("#modal-text").text("This works")
+    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm A'))
+})
+
+// <------ Moment Js reference and formatting code here------>
+
+// error caught, doesn't reference moment.js for some reason
+// does however format the code into readable entries so we can have a time stamp for the user
+
+// console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+>>>>>>> 6861765d4129d63e437d116646f1ab1085fde454
  
 
 });
@@ -157,7 +155,16 @@ $.ajax({
     url: 'https://randomuser.me/api/?results=500',
     dataType: 'json',
     success: function(data) {
-      console.log(data);
+        console.log(data)
+        const randFirst = data.results[0].name.first;
+        const randLast = data.results[0].name.last;
+        const randEmail = data.results[0].email;
+        //this inputs the random generated user info on welcome.html
+        $('#first_name').val(randFirst);
+        $("#last_name").val(randLast);
+        $("#email").val(randEmail);
+        
+        console.log(randFirst, randLast, randEmail + " This is randomly generated")
     }
 });
 
@@ -166,19 +173,16 @@ $.ajax({
 
 // Evan code here:
 
-var addUser = document.querySelector("#welcome-button");
-var userObject=[];
+var addUser = $("#welcome-button");
+var userObject = [];
 
-$(addUser).on("click", function() {
-    firstname = document.querySelector("first_name").value;
-    lastname = document.querySelector("last_name").value;
-    email = document.querySelector("email").value;
-    userObject.push({
-         FirstName: firstname,
-         LastName: lastname,
-         Email: email
-     });
-     localStorage.setItem(userObject);
-     console.log(userObject);
+$("#welcome-button").on("click", function(randFirst, randLast, randEmail) {
+    const firstName = $('#first_name').val();
+    const lastName = $('#last_name').val();
+    const email = $('#email').val();
+
+    console.log(firstName, lastName, email + " This generates after the submit button is clicked")
+
 });
+
 
