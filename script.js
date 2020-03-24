@@ -80,7 +80,7 @@ $( document ).ready(function() {
 
 $(".modal-trigger").on("click", function(){
     console.log($(this));
-    console.log(userObject.firstName + "targeting works!")
+    console.log(userObject.firstName + "targeting works!");
     $(".modal").modal();  
     $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm a'));
     $("#modal-text").text("Name: " + firstname + " " + lastName, "Reason for visit: " + $(".check-item").val());
@@ -91,21 +91,25 @@ $(".modal-trigger").on("click", function(){
 // <-----function reset all parameters------>
 function reset(){
 
+        console.log("reset was checked");
     $(".check-item").prop("checked", false);
     firstName = "";
     lastName = "";
     email = "";
     // targets all forms and resets data, error: targets only one data entry....sometimes
-    $("form").reset(); 
+    // $("form").reset(); 
+    window.location.href='welcome.html';
+
+
   
 }
 
 // <----reset button------>
 $("button").on("click", function () {
-    
-    // container.removeAttr("display: none");
-    reset();
+    console.log("was clicked")
 
+    reset();
+    // $("btn").attr("href", "welcome.html");
 });
 
 // <----- end chris code area-------->
