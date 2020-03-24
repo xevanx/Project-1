@@ -77,39 +77,13 @@ $( document ).ready(function() {
 
 })
 
-// Chris code here: 
-
-// <-----array vals and function storage------>
-
-// var welomeInput = [];
-// var userInfo = {};
-// // I don't know what I should target here
-// $("").each(function (index, value){
-
-// //     // creates an object out of user information, have user input be global variables
-//     userInfo = {"Name": firstname,"Email": email, "Reason": reason}
-// //     // pushes object variable into the array, have this last since we need to store
-// //     // the users help request into the object as well
-//     welomeInput.push(userInfo);
-// //     // pushes the whole thing into locall storage
-//     localStorage.setItem("welcomeInput", JSON.stringify(welomeInput));
-//     console.log(localStorage.getItem("welcomeInput"))
-
-// })
 
 $(".modal-trigger").on("click", function(){
-    console.log($(this))
-    $(".modal").modal()
-    $("#modal-text").text("This works")
-    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm A'))
-})
-
-// <------ Moment Js reference and formatting code here------>
-
-// error caught, doesn't reference moment.js for some reason
-// does however format the code into readable entries so we can have a time stamp for the user
-
-// console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+    console.log($(this));
+    console.log(userObject.firstName + "targeting works!")
+    $(".modal").modal();  
+    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm a'));
+    $("#modal-text").text("Name: " + firstname + " " + lastName, "Reason for visit: " + $(".check-item").val());
  
 
 });
