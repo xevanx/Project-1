@@ -98,15 +98,6 @@ $( document ).ready(function() {
 // })
 
 $(".modal-trigger").on("click", function(){
-<<<<<<< HEAD
-    console.log($(this));
-    $(".modal").modal();  
-    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm a'));
-    localStorage.getItem(userObject.firstName);
-    localStorage.getItem(userObject.lastName);
-    localStorage.getItem(userObject.email);
-    $("#modal-text").text("Name: " + firstname + " " + lastName, "Email: " + email, "Reason for visit: " + $(".check-item").val());
-=======
     console.log($(this))
     $(".modal").modal()
     $("#modal-text").text("This works")
@@ -119,7 +110,6 @@ $(".modal-trigger").on("click", function(){
 // does however format the code into readable entries so we can have a time stamp for the user
 
 // console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
->>>>>>> 6861765d4129d63e437d116646f1ab1085fde454
  
 
 });
