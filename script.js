@@ -79,33 +79,47 @@ $( document ).ready(function() {
 
 
 $(".modal-trigger").on("click", function(){
+<<<<<<< HEAD
     console.log($(this));
-    console.log(userObject.firstName + "targeting works!")
+    console.log(userObject.firstName + "targeting works!");
     $(".modal").modal();  
     $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm a'));
     $("#modal-text").text("Name: " + firstname + " " + lastName, "Reason for visit: " + $(".check-item").val());
  
 
+=======
+    console.log($(this))
+    var displayName = localStorage.getItem("savedName");
+    userNumb()
+    $(".modal").modal()
+    $("#modal-text").text("There are " + totalUser + " people ahead of you in the queue.")
+    $("h5").text(displayName + ", your estimated wait time is " + convertHour + ":" + convertMin + ".")
+    $("h4").text("Ticket Placed at " + moment().format('MMMM Do YYYY, h:mm A'))
+>>>>>>> 83c0636bb81b3bbe5f6f68dd61a66252538573aa
 });
 
 // <-----function reset all parameters------>
 function reset(){
 
+        console.log("reset was checked");
     $(".check-item").prop("checked", false);
     firstName = "";
     lastName = "";
     email = "";
     // targets all forms and resets data, error: targets only one data entry....sometimes
-    $("form").reset(); 
+    // $("form").reset(); 
+    window.location.href='welcome.html';
+
+
   
 }
 
 // <----reset button------>
 $("button").on("click", function () {
-    
-    // container.removeAttr("display: none");
-    reset();
+    console.log("was clicked")
 
+    reset();
+    // $("btn").attr("href", "welcome.html");
 });
 
 // <----- end chris code area-------->
@@ -139,14 +153,58 @@ $.ajax({
 
 var addUser = $("#welcome-button");
 var userObject = [];
+var waitTime = 0
+var convertHour
+var convertMin
+
+
 
 $("#welcome-button").on("click", function(randFirst, randLast, randEmail) {
     const firstName = $('#first_name').val();
     const lastName = $('#last_name').val();
     const email = $('#email').val();
-
+    localStorage.setItem("savedName", firstName);
     console.log(firstName, lastName, email + " This generates after the submit button is clicked")
+
+    location.replace("index.html")
 
 });
 
-
+function userNumb(){
+   totalUser = Math.floor(Math.random() * Math.floor(19));
+   
+   
+   for (i = 0; i < totalUser; i++) {
+       var randActivity = Math.floor(Math.random() * Math.floor(7));
+       if(randActivity === 1){
+           waitTime = waitTime + 5;
+       }
+       else if(randActivity === 2){
+           waitTime = waitTime + 3;
+       }
+       else if(randActivity === 3){
+           waitTime = waitTime + 20;
+       }
+       else if(randActivity === 4){
+           waitTime = waitTime + 25;
+       }
+       else if(randActivity === 5){
+           waitTime = waitTime + 30;
+       }
+       else if(randActivity === 6){
+           waitTime = waitTime + 45;
+       }
+       else{
+           waitTime = waitTime + 60;
+       }
+    }
+console.log(waitTime)
+ convertHour = Math.floor(waitTime / 60)
+ convertMin = waitTime - (convertHour * 60)
+ console.log(convertHour)
+ console.log(convertMin)
+ var stringHour = String(convertHour)
+ var stringMin = String(convertMin)
+ console.log(stringHour)
+ console.log(stringMin)
+};
