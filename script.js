@@ -173,4 +173,8 @@ $("#welcome-button").on("click", function(randFirst, randLast, randEmail) {
 
 });
 
-
+function userNumb(){
+   totalUser = Math.floor(Math.random() * Math.floor(19));
+   var waitTime = 0;
+   for (i = 0; i < totalUser; i++) {
+       
