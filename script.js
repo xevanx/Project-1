@@ -108,9 +108,18 @@ $("button").on("click", function () {
     // $("btn").attr("href", "welcome.html");
 });
 
-// <----- end chris code area-------->
+// <----- push code to local storage code here-------->
 
+//  $("").each(function (index, value){
 
+//     // //     // creates an object out of user information, have user input be global variables
+//     //     userInfo = {"Name": firstname,"Email": email, "Reason": reason}
+//     // //     // pushes object variable into the array, have this last since we need to store
+//     // //     // the users help request into the object as well
+//     //     welomeInput.push(userInfo);
+//     // //     // pushes the whole thing into locall storage
+//     //     localStorage.setItem("welcomeInput", JSON.stringify(welomeInput));
+//     //     console.log(localStorage.getItem("welcomeInput"))
 
 
 // Random User API
