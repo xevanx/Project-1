@@ -1,0 +1,17 @@
+.bi{
+    background-image: linear-gradient(to bottom right,#cfd8dc , #455a64);
+    padding-top: 2%;
+    padding-bottom: 30%;
+}
+
+h4, h2{
+ color: white 
+}
+span{
+    color: white 
+}
+
+#yesNno{
+    color: white
+}
+
