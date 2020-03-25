@@ -184,7 +184,7 @@ function userNumb(){
            waitTime = waitTime + 60;
        }
     }
-console.log(waitTime)
+    console.log(waitTime)
  convertHour = Math.floor(waitTime / 60)
  convertMin = waitTime - (convertHour * 60)
  console.log(convertHour)
